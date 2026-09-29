@@ -65,6 +65,11 @@ class Developer(Employee):
 
 
 object = []
+p_obj = None
+e_obj = None
+m_obj = None
+d_obj = None
+
 
 
 
@@ -153,30 +158,34 @@ while True :
         choice = int(input("Enter Your Choice :"))
 
         if choice == 1:
-            for obj in object:
-                if type(obj) == Person:
-                    obj.display()
+            if p_obj is not None:
+                p_obj.display()
+            else:
+                print("Not Found Person Details !!")
 
         elif choice == 2:
-            for obj in object:
-                if type(obj) == Employee:
-                     obj.display()
+            if e_obj is not None:
+                e_obj.display()
+            else:
+                print("Not Found Employee Details !!")
 
         elif choice == 3:
-            for obj in object:
-                 if type(obj) == Manager:
-                     obj.display()
+            if m_obj is not None:
+                m_obj.display()
+            else:
+                print("Not Found Manager Details  !!")
 
         elif choice == 4:
-            for obj in object:
-                if type(obj) == Developer:
-                    obj.display()
-
+            if d_obj is not None:
+                d_obj.display()
+            else:
+                print("Not Found Developer Details !!")
         else:
             print("Invalid Choice !!")
 
     elif choice == 6:
-        print("Thank You !")
+        print("Exiting the system.All resources have been freed.")
+        print("Goodbye")
         break
     else:
         print("Invalid Choice !!")

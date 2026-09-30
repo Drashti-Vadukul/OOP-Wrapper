@@ -99,6 +99,7 @@ while True :
         age = input("Enter Your Age :")
 
         p = Person(name ,age)
+        p_obj = p
         object.append(p)
 
         print("\n Person Created with name :",p.get_name(),"and Age :",p.get_age())
@@ -111,6 +112,7 @@ while True :
         salary = float( input("Enter Salary :"))
 
         e = Employee(name, age, employee_id, salary)
+        e_obj = e
         object.append(e)
 
         print("Employee Created with name",name,", age:",age,", ID:",employee_id,", and Salary:",salary)
@@ -124,6 +126,7 @@ while True :
          department = input("Enter Department :")
 
          m = Manager(name, age, employee_id, salary, department)
+         m_obj = m
          object.append(m)
 
          print("Manager Created with name ",name,", age:",age,", ID:",employee_id,", Salary:",salary ,", and Department :",department)
@@ -138,6 +141,7 @@ while True :
         language = input("Enter Language :")
 
         d = Developer(name, age, employee_id, salary, language)
+        d_obj = d
         object.append(d)
         
         print("Developer Created with name ",name,", age:",age,", ID:",employee_id,", Salary:",salary ,", and Programming Language :",language)
